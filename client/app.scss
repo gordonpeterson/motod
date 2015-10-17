@@ -8,10 +8,38 @@ ion-nav-view.has-header.has-footer.view-container {
   // background: pink;
 }
 
+
+// @mixin placeholder-color( $color ) {
+
+// 	::-webkit-input-placeholder {
+// 		 color: $color;
+// 	}
+// 	:-moz-placeholder { /* Firefox 18- */
+// 		 color: $color;  
+// 	}
+// 	::-moz-placeholder {  /* Firefox 19+ */
+// 		 color: $color;  
+// 	}
+// 	:-ms-input-placeholder {  
+// 		 color: $color;  
+// 	}
+// }
+
+// @mixin bgImage(){
+// 	background: #1f1f1f url('public/images/app-bg.png') center top no-repeat;
+// 	background-size: cover;
+// }
+
 //========================== platform overrides ==============================
+
+h1,h2,h3,h4,h5,h6,p,
+.ionic-body{
+	color: white;
+}
+
 .view-container{
 		height: auto;
-		border: 1px solid lime;
+		// border: 1px solid lime;
 		top: 0;
 		bottom: 0;
 		&.has-header{
@@ -51,14 +79,28 @@ ion-nav-view.has-header.has-footer.view-container {
 	&.tabs-striped .tabs,
 	&>.tabs{
 		background-color: $dark;
+		border-color: darken( $dark, 10% );
+
+		.tab-item.active{
+			border-color: lighten( $dark, 10% );
+		}
 	}
 }
 
-.pane, .view{
-	background-color: rgba( black, .0);
-	background-color: white;
+.button{
+	&.button-royal{
+		background-color: $darkPurple;
+	}
 }
 
+.account-wrapper,
+.pane, 
+.view{
+	background: #1f1f1f url('/images/app-bg.png') center top no-repeat;
+	background-size: cover;
+}
+
+//========================== custom app styles ==============================
 .content-wrapper,
 .account-wrapper,
 .motodynasty-app{
@@ -67,6 +109,8 @@ ion-nav-view.has-header.has-footer.view-container {
 	height: 100%;
 	border: 2px dashed;
 	border: none;
+	
+
 }
 
 .motodynasty-app{

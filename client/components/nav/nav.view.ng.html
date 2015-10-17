@@ -1,15 +1,19 @@
-<ion-tabs class="nav-view tabs-dark tabs-icon-only tabs-stripped">
+<ion-tabs class="nav-view tabs-dark tabs-icon-top tabs-stripped">
 
     <a href="/dashboard" class="tab-item" ng-class="{active:getState()==='dashboard'}">
-      <i class="icon ion-ios-analytics"></i>
-      dashboard
+      <i class="icon ion-ios-speedometer-outline"></i>
+      Dashboard
     </a>
     <a href="/things" class="tab-item" ng-class="{active:getState()==='things'}">
-      <i class="icon ion-android-checkmark-circle"></i>
-      things
+      <i class="icon ion-ios-bolt"></i>
+      Create Contest
+    </a>
+    <a href="/my-contests" class="tab-item" ng-class="{active:getState()==='my-contests'}">
+      <i class="icon ion-ios-people"></i>
+      My Contests
     </a>
     <a href="/about" class="tab-item" ng-class="{active:getState()==='about'}">
-      <i class="icon ion-information-circled"></i>
-      about
+      <i class="icon ion-earth"></i>
+      Open Contests
     </a>
 </ion-tabs>

@@ -6,6 +6,6 @@ angular.module('motodynastyApp')
   .state('about', {
     url: '/about',
     templateUrl: 'client/about/about.view.ng.html',
-    controller: 'AboutCtrl'
+    controller: 'aboutCtrl'
   });
 });
