@@ -1,10 +1,15 @@
-<div class="tabs-striped tabs-background-positive tabs-color-light">
-  <div class="tabs">
+<ion-tabs class="tabs-dark tabs-icon-only tabs-stripped tabs-icon-top">
+
+    <a href="/dashboard" class="tab-item" ng-class="{active:getState()==='dashboard'}">
+      <i class="icon ion-ios-analytics"></i>
+      dashboard
+    </a>
     <a href="/" class="tab-item" ng-class="{active:getState()==='main'}">
-      <i class="icon ion-home"></i>
+      <i class="icon ion-android-checkmark-circle"></i>
+      things
     </a>
     <a href="/about" class="tab-item" ng-class="{active:getState()==='about'}">
       <i class="icon ion-information-circled"></i>
+      about
     </a>
-  </div>
-</div>
+</ion-tabs>

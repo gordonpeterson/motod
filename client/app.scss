@@ -1,3 +1,20 @@
+$dark: #1f1f1f;
+
 ion-nav-view.has-header.has-footer.view-container {
   height: auto;
+}
+
+
+.bar{
+	&.bar-dark{
+		background-color: $dark;
+	}
+}
+
+// .tabs-dark > .tabs, .tabs.tabs-dark
+.tabs-dark{
+	&.tabs,
+	&>.tabs{
+		background-color: $dark;
+	}
 }
