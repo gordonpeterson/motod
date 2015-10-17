@@ -56,6 +56,12 @@ h1,h2,h3,h4,h5,h6,p,
 			bottom: 0;
 		}
 
+	.platform-ios.platform-cordova:not(.fullscreen) &{
+		&.has-header{
+			top: $barHeight + 20px;
+		}
+	}
+
 	.platform-android &{
 		&.has-header.has-footer{
 			bottom: 0;
@@ -98,6 +104,12 @@ h1,h2,h3,h4,h5,h6,p,
 .view{
 	background: #1f1f1f url('/images/app-bg.png') center top no-repeat;
 	background-size: cover;
+
+	.platform-ios.platform-cordova:not(.fullscreen) &{
+		&.has-header{
+			top: 0;
+		}
+	}
 }
 
 //========================== custom app styles ==============================
@@ -115,7 +127,6 @@ h1,h2,h3,h4,h5,h6,p,
 
 .motodynasty-app{
 	background-color: $darkPurple;
-	border-color: red;
 }
 
 .account-wrapper{
