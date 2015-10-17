@@ -1,4 +1,12 @@
-<div class="bar bar-header bar-positive has-tabs-top">
-  <div class="h1 title">motodynastyApp</div>
+<ion-nav-bar class="bar-dark has-logo">
+	<ion-nav-back-button></ion-nav-back-button>
+  <div class="h1 title">Moto Dynasty</div>
+	<ion-nav-buttons side="secondary ">
+		<button class="button button-clear" ng-click="vm.setShowAccount( !vm.showAccount );">
+			<i class="ion-person icon"></i>
+		</button>
+	</ion-nav-buttons>
+  <!-- 
   <blaze-template name="loginButtons"></blaze-template>
-</div>
+   -->
+</ion-nav-bar>
