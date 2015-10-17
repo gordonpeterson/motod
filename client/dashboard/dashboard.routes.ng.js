@@ -5,6 +5,6 @@ angular.module('motodynastyApp')
 	$stateProvider
 	.state('dashboard', {
 		url: '/',
-		templateUrl: 'client/dashboard/dashboard.view.ng.html'
+		templateUrl: 'client/dashboard/dashboard-view.ng.html'
 	});
 });

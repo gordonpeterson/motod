@@ -1,3 +1,15 @@
-<ion-content class="padding" ng-controller="dashboardCtrl as vm">
-  <p>This is the dashboard.view using the {{ vm.controllerName }} controller</p>
+<ion-content class="dashboard-view " ng-controller="dashboardCtrl as vm">
+
+	<ion-slide-box on-slide-changed="vm.slideHasChanged($index)">
+		<ion-slide ng-repeat="item in vm.featured">
+			<div class="box" ng-class="item.series">
+				<h1 class="title">{{item.title}}</h1>
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+
+	<div class="padding">
+		<p>This is the dashboard.view using the {{ vm.controllerName }} controller</p>
+	</div>
+
 </ion-content>
