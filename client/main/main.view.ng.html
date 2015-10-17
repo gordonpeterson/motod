@@ -10,10 +10,10 @@
     <form ng-submit="$parent.save()" name="$parent.form" novalidate="">
       <div class="list">
         <label class="item item-input">
-          <input type="text" placeholder="Add a thing" ng-model="$parent.newThing.name"/>
+          <input type="text" placeholder="thing's name" ng-model="$parent.newThing.name"/>
         </label>
       </div>
-      <button type="submit" class="button button-block button-energized">Add</button>
+      <button type="submit" class="button button-block button-energized">Add Thing</button>
     </form>
     <div class="list">
       <div ng-repeat="thing in $parent.things" class="item item-button-right">
