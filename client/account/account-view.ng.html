@@ -1,5 +1,15 @@
-<ion-content ng-controller="accountCtrl as vm"
-	class="account-wrapper"
-	>
-  <h2>This is the account-view with controller {{ vm.controllerName }}</h2>
-</ion-content>
+<div class="account-wrapper">
+	<ion-nav-bar class="toolbar bar-dark has-logo" >
+		<div class="h1 title">Moto Dynasty</div>
+		<ion-nav-buttons side="secondary ">
+			<button class="button button-clear button-energized" ng-click="vm.closeModal()">
+				<i class="icon ion-close"></i>
+			</button>
+		</ion-nav-buttons>
+	</ion-nav-bar>
+	<ion-content ng-controller="accountCtrl as vm"
+		class="has-header"
+		>
+		<h2>This is the account-view with controller {{ vm.controllerName }}</h2>
+	</ion-content>
+</div>

@@ -1,12 +1,44 @@
 $dark: #1f1f1f;
 $darkPurple: #270928;
+$yellow: #F0C635;
+$barHeight: 44px;
 
 ion-nav-view.has-header.has-footer.view-container {
-  height: auto;
+  // height: auto;
   // background: pink;
 }
 
+//========================== platform overrides ==============================
+.view-container{
+		height: auto;
+		border: 1px solid lime;
+		top: 0;
+		bottom: 0;
+		&.has-header{
+			top: $barHeight;
+		}
+		&.has-footer{
+			bottom: $barHeight;
+		}
 
+		.has-tabs-top{
+			top: 0;
+		}
+		.has-tabs{
+			bottom: 0;
+		}
+
+	.platform-android &{
+		&.has-header.has-footer{
+			bottom: 0;
+			top: $barHeight*2;
+
+		}
+	}
+}
+
+
+//========================== color overrides ==============================
 .bar{
 	&.bar-dark{
 		background-color: $dark;
@@ -16,11 +48,11 @@ ion-nav-view.has-header.has-footer.view-container {
 // .tabs-dark > .tabs, .tabs.tabs-dark
 .tabs-dark{
 	&.tabs,
+	&.tabs-striped .tabs,
 	&>.tabs{
 		background-color: $dark;
 	}
 }
-
 
 .pane, .view{
 	background-color: rgba( black, .0);

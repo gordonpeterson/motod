@@ -1,5 +1,6 @@
 angular.module('motodynastyApp', [
   'angular-meteor',
+  'ngAnimate', 
   'ionic'
 ]);
 
