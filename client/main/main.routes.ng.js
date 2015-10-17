@@ -3,8 +3,8 @@
 angular.module('motodynastyApp')
 .config(function($stateProvider) {
   $stateProvider
-  .state('main', {
-    url: '/',
+  .state('things', {
+    url: '/things',
     templateUrl: 'client/main/main.view.ng.html',
     controller: 'MainCtrl'
   });

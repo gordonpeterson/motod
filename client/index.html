@@ -3,9 +3,18 @@
 	<base href="/">
 </head>
 <body>
-	<div class="app-wrapper" ng-controller="appCtrl as vm">
-		<toolbar></toolbar>
-		<ion-nav-view class="has-header has-footer"></ion-nav-view>
-		<nav></nav>
+	<div ng-controller="appCtrl as vm"
+	class="motodynasty-app" ng-class="vm.updateCss()" 
+	>
+
+		<account-view></account-view>
+
+		<div class="content-wrapper" ng-class="vm.currentState">
+			<toolbar></toolbar>
+			<ion-nav-view nam="dynasty-content" class="has-header has-footer">
+				load
+			</ion-nav-view>
+			<nav></nav>
+		</div>
 	</div>
 </body>
