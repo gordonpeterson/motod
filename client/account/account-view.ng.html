@@ -1,8 +1,11 @@
 <div class="account-wrapper">
 	<ion-content ng-controller="accountCtrl as vm"
-		class="account-content has-footer"
+		class="account-content has-footer padding"
 		>
-		<h2>This is the account-view with controller {{ vm.controllerName }}</h2>
+		<blaze-template name="loginButtons"></blaze-template>
+		<p>
+		
+		</p>
 	</ion-content>
 	<ion-nav-bar class="bar-footer bar-dark has-logo" ng-click="vm.closeModal()">
 		<div class="h1 title">Moto Dynasty</div>
