@@ -1,8 +1,8 @@
 Series = new Mongo.Collection('series');
 
 Series.featured = function () {
-	var featuredSkus = ['mec', 'motox', 'supercross' ];
-	return Series.find( {sku : {$in : featuredSkus}},
+	var featuredSlugs = ['mec', 'motox', 'supercross' ];
+	return Series.find( {slug : {$in : featuredSlugs}},
 		{ fields : { hidden1: false, hidden2: false }})
 };
 
