@@ -12,20 +12,29 @@ angular
 	.module('motodynastyApp')
 	.controller('accountCtrl', accountCtrl);
 
-accountCtrl.$inject = [];
-
 /* @ngInject */
-function accountCtrl () {
+function accountCtrl ( $rootScope ) {
 
 	//jshint ignore:line
 	var vm = this; 
-	vm.controllerName = 'accountCtrl'; 
+	vm.controllerName = 'accountCtrl';
+	vm.username = '';
+	vm.isAdmin = false;
 	
 
 	activate();
 
 	function activate () {
 		console.log( 'activated controller: ' + vm.controllerName );
+
+		var user = $rootScope.currentUser;
+
+		if( user ){
+			vm.username = user.username;
+			vm.isAdmin = window.isAdmin();
+
+		}
+
 	}
 
 }

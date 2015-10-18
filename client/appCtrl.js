@@ -27,12 +27,14 @@
 
 		function activate () {
 			console.log( 'activated controller: ' + vm.controllerName );
-
-		$rootScope.$on('$stateChangeStart', onStateChange);
+			$rootScope.$on('$stateChangeStart', onStateChange);
 		}
 
 		function onStateChange (event, toState, toParams, fromState, fromParams){ 
-			console.log( toState.name + " >>>>> " + fromState.name );
+			var user = $rootScope.currentUser;
+
+			console.dir( user );
+			console.log(  toState.name + " >>>>> " + fromState.name );
 		    // event.preventDefault(); 
 		    // transitionTo() promise will be rejected with 
 		    // a 'transition prevented' error
