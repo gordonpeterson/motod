@@ -13,33 +13,13 @@
 		.module('motodynastyApp')
 		.controller('dashboardCtrl', dashboardCtrl);
 
-	dashboardCtrl.$inject = [];
-
 	/* @ngInject */
-	function dashboardCtrl () {
+	function dashboardCtrl ( $scope, $meteor, $ionicScrollDelegate ) {
 
 		//jshint ignore:line
 		var vm = this; 
 		vm.controllerName = 'dashboardCtrl'; 
-		vm.featured = [
-			{
-				'title': "SuperCross 1",
-				'series': "supercross"
-			},
-			{
-				'title': "MotoCross 1",
-				'series': "motocross"
-			},
-			{
-				'title': "SuperCross 2",
-				'series': "supercross"
-			},
-			{
-				'title': "MotoCross 2",
-				'series': "motocross"
-			}
-
-		];
+		vm.featured = [];
 
 
 
@@ -54,7 +34,10 @@
 		activate();
 
 		function activate () {
-			console.log( 'activated controller: ' + vm.controllerName );
+			console.dir( $meteor );
+			console.dir( $scope );
+			vm.featured = $scope.$meteorCollection( Series.featured );
+
 		}
 
 	}
