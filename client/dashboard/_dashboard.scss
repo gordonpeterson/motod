@@ -1,10 +1,10 @@
-$mec: springgreen !default;
-$mx: aquamarine !default;
-$superx: blueviolet !default;
-$mxgp: steelblue !default;
-$motogp: deepskyblue !default;
-$arenax: goldenrod !default;
-$nascar: orangered !default;
+// $mec: springgreen !default;
+// $mx: aquamarine !default;
+// $superx: blueviolet !default;
+// $mxgp: steelblue !default;
+// $motogp: deepskyblue !default;
+// $arenax: goldenrod !default;
+// $nascar: orangered !default;
 
 
 .dashboard-view{
@@ -12,7 +12,7 @@ $nascar: orangered !default;
 
 	.slider{
 		// border: 1px dashed aqua;
-		height: 200px;
+		height: 230px;
 	}
 	.slider-slide{
 		// background: pink;
@@ -44,13 +44,51 @@ $nascar: orangered !default;
 		}
 	}
 
+	.details{
+		margin: 15px 35px;
+	}
+
+	.ad{
+		// border: 1px solid red;
+		width: 100%;
+		height: auto;
+		img{
+			// border: 1px solid lime;
+			width: 100%;
+			height: auto;
+		}
+	}
+
 	.title{
 		width: 100%;
 		text-align: center;
 		margin: 5px 0;
 	}
 
+	.all-series.button{
+		margin: 0;
+	}
+
 	.other-content{
 		
+	}
+
+	.leaderboard{
+		color: goldenrod;
+		.list{
+			padding: 10px 25px;
+			list-style: initial;
+			list-style-type: decimal;
+		}
+		li{
+			margin: 5px 0;
+			border-bottom: 1px solid goldenrod;
+		}
+		// .name{
+		// 	border: 1px solid goldenrod;
+		// }
+		.score{
+			float: right;
+		}
 	}
 }

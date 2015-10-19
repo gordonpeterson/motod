@@ -5,15 +5,41 @@
 		<ion-slide ng-repeat="item in vm.featured">
 			<div class="box" ng-class="item.slug">
 				<h1 class="title">{{item.name}}</h1>
+				<p class="details">{{item.description}}</p>
 			</div>
 		</ion-slide>
 	</ion-slide-box>
-	<button class="button button-full button-dark">
+	<button class="button all-series button-full button-dark icon-right ion-chevron-right">
 		View All Series
 	</button>
+	<div class="ad">
+		<img src="/images/ad-home.png">
+	</div>
 
-	<div class="padding">
-		<p>This is the dashboard.view using the {{ vm.controllerName }} controller</p>
+	<div class="leaderboard padding ">
+		<h3 class="title">Moto Dynasty Global Leaderboard</h3>
+		<ol class="list">
+			<li>
+				<span class="name">Gordon Peterson</span>
+				<span class="score">9876</span>
+			</li>
+			<li>
+				<span class="name">Craig Lyons</span>
+				<span class="score">9875</span>
+			</li>
+			<li>
+				<span class="name">Nick Hansen</span>
+				<span class="score">987</span>
+			</li>
+			<li>
+				<span class="name">Milo Peterson</span>
+				<span class="score">222</span>
+			</li>
+			<li>
+				<span class="name">Bob Barker</span>
+				<span class="score">0</span>
+			</li>
+		</ol>
 	</div>
 
 </ion-content>
