@@ -1,13 +1,5 @@
 <div class="account-wrapper">
-	<ion-content ng-controller="accountCtrl as vm"
-		class="account-content has-footer padding"
-		>
-		<blaze-template name="loginButtons"></blaze-template>
-		<p>
-		
-		</p>
-	</ion-content>
-	<ion-nav-bar class="bar-footer bar-dark has-logo" ng-click="vm.closeModal()">
+	<ion-nav-bar class="bar-dark has-logo" ng-click="vm.closeModal()">
 		<div class="h1 title">Moto Dynasty</div>
 		<ion-nav-buttons side="secondary ">
 			<button class="button button-clear button-energized" >
@@ -15,4 +7,16 @@
 			</button>
 		</ion-nav-buttons>
 	</ion-nav-bar>
+	<div class="bar sub-navbar bar-energized">
+		<blaze-template name="loginButtons"></blaze-template>
+	</div>
+	<ion-content ng-controller="accountCtrl as vm"
+		class="account-content has-subheader padding"
+		>
+		<div class="admin" ng-show="vm.isAdmin">
+			<h3 class="title">Welcome Admin</h3>
+			
+		</div>
+
+	</ion-content>
 </div>
