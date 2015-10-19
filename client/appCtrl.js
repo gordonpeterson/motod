@@ -21,6 +21,7 @@
 		//jshint ignore:line
 		var vm = this; 
 		vm.controllerName = 'appCtrl'; 
+		vm.selectedSeries = 'loading';
 		
 
 		activate();

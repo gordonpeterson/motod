@@ -1,7 +1,11 @@
-$calm: blue !default;
-$royal: purple !default;
-$balanced: lime !default;
-$energized: yellow !default;
+$mec: springgreen !default;
+$mx: aquamarine !default;
+$superx: blueviolet !default;
+$mxgp: steelblue !default;
+$motogp: deepskyblue !default;
+$arenax: goldenrod !default;
+$nascar: orangered !default;
+
 
 .dashboard-view{
 	// border: 2px solid orange;
@@ -16,11 +20,27 @@ $energized: yellow !default;
 	.box{
 		background-color: rgba( black, .5 );
 		height: 100%;
-		&.supercross{
-			background-color: rgba( $royal, .5 );
+
+		&.mec{
+			background-color: rgba( $mec, .3);
 		}
-		&.motocross{
-			background-color: rgba( $balanced, .5 );
+		&.mx{
+			background-color: rgba( $mx, .3);
+		}
+		&.superx{
+			background-color: rgba( $superx, .3);
+		}
+		&.mxgp{
+			background-color: rgba( $mxgp, .3);
+		}
+		&.motogp{
+			background-color: rgba( $motogp, .3);
+		}
+		&.arenax{
+			background-color: rgba( $arenax, .3);
+		}
+		&.nascar{
+			background-color: rgba( $nascar, .3);
 		}
 	}
 

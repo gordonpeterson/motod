@@ -24,14 +24,14 @@ if( Meteor.users.find().count() === 0 ){
 		},
 		{
 			id : '2',
-			slug : 'pro-mx',
+			slug : 'mx',
 			name : "Pro Moto X",
 			description : "The Pro Moto X description text",
 			series : [],
 		},
 		{
 			id : '3',
-			slug : 'supercross',
+			slug : 'superx',
 			name : "AMA Supercross Championship",
 			description : "The AMA Supercross Championship description text",
 			series : [],
@@ -45,14 +45,14 @@ if( Meteor.users.find().count() === 0 ){
 		},
 		{
 			id : '5',
-			slug : 'moto-gp',
+			slug : 'motogp',
 			name : "MotoGP",
 			description : "The MotoGP description text",
 			series : [],
 		},
 		{
 			id : '6',
-			slug : 'arena-x',
+			slug : 'arenax',
 			name : "ArenaCross",
 			description : "The ArenaCross description text",
 			series : [],

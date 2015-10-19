@@ -3,6 +3,51 @@ $darkPurple: #270928;
 $yellow: #F0C635;
 $barHeight: 44px;
 
+
+$mec: springgreen !default;
+$mx: aquamarine !default;
+$superx: blueviolet !default;
+$mxgp: steelblue !default;
+$motogp: deepskyblue !default;
+$arenax: goldenrod !default;
+$nascar: orangered !default;
+
+/* 
+lime;
+yellowgreen;
+turquoise;
+teal;
+royal;
+blue;
+royal;
+blue;
+orange;
+mediumturquoise;
+mediumspringgreen;
+mediumpurple;
+mediumpurple ;
+mediumorchid;
+mediumaquamarine;
+limegreen;
+lime;
+indianred;
+hotpink;
+greenyellow;
+gold;
+firebrick;
+dodgerblue;
+deeppink;
+darkslateblue;
+darkorange;
+darkcyan;
+crimson;
+cornflowerblue;
+coral;
+ */
+
+
+
+
 ion-nav-view.has-header.has-footer.view-container {
   // height: auto;
   // background: pink;
@@ -139,3 +184,15 @@ h1,h2,h3,h4,h5,h6,p,
 	// margin-top: 200px;
 	border-color: green;
 }
+
+
+
+
+
+//=======================imports=========
+///
+@import "{}/client/dashboard/dashboard.scss"
+
+
+
+
