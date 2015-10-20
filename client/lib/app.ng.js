@@ -1,3 +1,4 @@
+/* jshint ignore:start */
 angular.module('motodynastyApp', [
   'angular-meteor',
   'ngAnimate', 
@@ -13,3 +14,6 @@ if(Meteor.isCordova) {
 } else {
   angular.element(document).ready(onReady);
 }
+/* jshint ignore:end */
+
+
