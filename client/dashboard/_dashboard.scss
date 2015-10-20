@@ -1,21 +1,9 @@
-// $mec: springgreen !default;
-// $mx: aquamarine !default;
-// $superx: blueviolet !default;
-// $mxgp: steelblue !default;
-// $motogp: deepskyblue !default;
-// $arenax: goldenrod !default;
-// $nascar: orangered !default;
-
-
 .dashboard-view{
-	// border: 2px solid orange;
 
 	.slider{
-		// border: 1px dashed aqua;
 		height: 230px;
 	}
 	.slider-slide{
-		// background: pink;
 	}
 	.box{
 		background-color: rgba( black, .5 );
@@ -67,6 +55,7 @@
 
 	.all-series.button{
 		margin: 0;
+		transition: background-color .5s;
 	}
 
 	.other-content{
@@ -91,4 +80,50 @@
 			float: right;
 		}
 	}
+
+
+	&.mec{
+		.button.all-series{
+			background-color: $mec;
+			border-color: darken( $mec, .10 );
+		}
+	}
+	&.mx{
+		.button.all-series{
+			background-color: $mx;
+			border-color: darken( $mx, .10 );
+		}
+	}
+	&.superx{
+		.button.all-series{
+			background-color: $superx;
+			border-color: darken( $superx, .10 );
+		}
+	}
+	&.mxgp{
+		.button.all-series{
+			background-color: $mxgp;
+			border-color: darken( $mxgp, .10 );
+		}
+	}
+	&.motogp{
+		.button.all-series{
+			background-color: $motogp;
+			border-color: darken( $motogp, .10 );
+		}
+	}
+	&.arenax{
+		.button.all-series{
+			background-color: $arenax;
+			border-color: darken( $arenax, .10 );
+		}
+	}
+	&.nascar{
+		.button.all-series{
+			background-color: $nascar;
+			border-color: darken( $nascar, .10 );
+		}
+	}
+
+
 }

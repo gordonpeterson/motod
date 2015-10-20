@@ -13,7 +13,7 @@ angular
 	.controller('accountCtrl', accountCtrl);
 
 /* @ngInject */
-function accountCtrl ( $rootScope ) {
+function accountCtrl ( $scope, $rootScope, $meteor ) {
 
 	//jshint ignore:line
 	var vm = this; 

@@ -21,7 +21,6 @@
 		vm.controllerName = 'dashboardCtrl'; 
 		vm.featured = [];
 		vm.selectedSeries = {};
-		vm.selectedSeries.slug = 'loading';
 
 
 
