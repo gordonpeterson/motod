@@ -2,7 +2,8 @@
 angular.module('motodynastyApp', [
   'angular-meteor',
   'ngAnimate', 
-  'ionic'
+  'ionic',
+  'ui.router'
 ]);
 
 onReady = function() {
