@@ -1,0 +1,14 @@
+{
+	
+	"globals": {
+		"angular": true,
+		"Meteor": true,
+		"Mongo": true,
+		"_": true
+	},
+	"predef": [ 
+		"Account",
+		"Contest",
+		"isAdmin"
+	]
+}
