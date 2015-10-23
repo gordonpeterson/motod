@@ -21,6 +21,7 @@
 		vm.controllerName = 'accountCtrl';
 		vm.username = '';
 		vm.isAdmin = false;
+		vm.userType = 'guest';
 		
 	
 		activate();
@@ -33,6 +34,8 @@
 			if( user ){
 				vm.username = user.username;
 				vm.isAdmin = window.isAdmin();
+				vm.userType = vm.isAdmin ? 'admin' : 'user';
+
 	
 			}
 	
