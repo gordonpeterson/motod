@@ -12,11 +12,20 @@
 	</div>
 	<ion-content ng-controller="accountCtrl as vm"
 		class="account-content has-subheader padding"
+		ng-class="{'has-footer':vm.isAdmin}"
 		>
 		<div class="admin" ng-show="vm.isAdmin">
-			<h3 class="title">Welcome Admin</h3>
-			
+			<h3 class="title">Welcome Admin: {{vm.username}}</h3>
 		</div>
 
 	</ion-content>
+	<ion-footer-bar>
+		<div class="buttons">
+			<button class="button">Left Button</button>
+		</div>
+		<h1 class="title">Title!</h1>
+		<div class="buttons" ng-click="doSomething()">
+			<button class="button">Right Button</button>
+		</div>
+	</ion-footer-bar>
 </div>
