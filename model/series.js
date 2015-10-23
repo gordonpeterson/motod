@@ -9,13 +9,13 @@ Series.featured = function () {
 
 /* jshint unused: false */
 Series.allow({
-	update : function ( userid, series ) {
+	update : function ( query, document ) {
 		return isAdmin();
 	},
-	insert : function ( userid, series ) {
+	insert : function ( query, document ) {
 		return isAdmin();
 	},
-	remove : function ( userid, series ) {
+	remove : function ( query, document ) {
 		return isAdmin();
 	}
 });
