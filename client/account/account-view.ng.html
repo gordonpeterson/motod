@@ -1,4 +1,4 @@
-<div class="account-wrapper" ng-controller="accountCtrl as vm">
+<div class="account-wrapper" >
 	<ion-nav-bar class="bar-dark has-logo" ng-click="vm.closeModal()">
 		<div class="h1 title">Moto Dynasty</div>
 		<ion-nav-buttons side="secondary ">
@@ -7,40 +7,42 @@
 			</button>
 		</ion-nav-buttons>
 	</ion-nav-bar>
-	<div class="bar sub-navbar bar-energized">
-		<blaze-template name="loginButtons"></blaze-template>
-	</div>
-
-	<div ng-switch on="vm.userType">
-
-		<div ng-switch-when="admin">
-			<ion-content class="admin account-content has-subheader padding">
-				<h3 class="title">Yo {{vm.username}}</h3>	
-			</ion-content>
-			<ion-footer-bar >
-				<div class="buttons">
-					<button class="button">Left Button</button>
-				</div>
-				<h1 class="title">Title!</h1>
-				<div class="buttons" ng-click="doSomething()">
-					<button class="button">Right Button</button>
-				</div>
-			</ion-footer-bar>
-		</div> <!-- end admin -->
-
-
-		<div ng-switch-when="user">
-			<ion-content class="user account-content has-subheader padding">
-				<h3 class="title">Hey {{vm.username}}</h3>
-			</ion-content>
-		</div> <!-- end user -->
-
-
-		<div ng-switch-default>
-			<ion-content class="guest account-content has-subheader padding">
-				<h3 class="title">You are not logged in</h3>
-			</ion-content>
-		</div> <!-- end guest -->
+	<div class="account-content" ng-controller="accountCtrl as vm">
+		<div class="bar sub-navbar bar-energized">
+			<blaze-template name="loginButtons"></blaze-template>
+		</div>
+	
+		<div ng-switch on="vm.userType">
+	
+			<div ng-switch-when="admin">
+				<ion-content class="admin has-subheader padding">
+					<h3 class="title">Yo {{vm.username}}</h3>	
+				</ion-content>
+				<ion-footer-bar >
+					<div class="buttons">
+						<button class="button">Left Button</button>
+					</div>
+					<h1 class="title">Title!</h1>
+					<div class="buttons" ng-click="doSomething()">
+						<button class="button">Right Button</button>
+					</div>
+				</ion-footer-bar>
+			</div> <!-- end admin -->
+	
+	
+			<div ng-switch-when="user">
+				<ion-content class="user has-subheader padding">
+					<h3 class="title">Hey {{vm.username}}</h3>
+				</ion-content>
+			</div> <!-- end user -->
+	
+	
+			<div ng-switch-default>
+				<ion-content class="guest has-subheader padding">
+					<h3 class="title">You are not logged in</h3>
+				</ion-content>
+			</div> <!-- end guest -->
+		</div>
 	</div>
 		
 
