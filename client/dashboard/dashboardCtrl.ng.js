@@ -40,7 +40,7 @@
 			vm.featured = $scope.$meteorCollection( Series.featured );
 			if (vm.featured.length > 0 ) {
 				vm.selectedSeries = vm.featured[0];
-				vm.selectedSeries.slug = vm.featured[0].slug || 'not-found';
+				vm.selectedSeries._id = vm.featured[0]._id || 'not-found';
 			};
 		}
 
