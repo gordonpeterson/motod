@@ -15,10 +15,9 @@
 		.controller('accountCtrl', accountCtrl);
 	
 	/* @ngInject */
-	function accountCtrl ( $scope, $rootScope, $meteor ) {
+	function accountCtrl ( $scope, $rootScope ) {
 	
-		//jshint ignore:line
-		var vm = this; 
+		var vm = this; //jshint ignore:line
 		vm.controllerName = 'accountCtrl';
 		vm.username = '';
 		vm.isAdmin = false;
@@ -27,7 +26,7 @@
 		activate();
 	
 		function activate () {
-			console.log( 'activated controller: ' + vm.controllerName );
+			// console.log( 'activated controller: ' + vm.controllerName );
 	
 			var user = $rootScope.currentUser;
 	
