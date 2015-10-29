@@ -1,0 +1,27 @@
+<ion-pane>
+  <ion-content class="padding things">
+    <h1>Things</h1>
+    <!-- 
+      Due to ion-content creating a child scope, we have to use $parent to
+      access our own scope. This only applies for variables inside an
+      ion-content directive. Outside ion-content you can call 'things' directly
+    -->
+    <p class="total">Total number of things: {{ $parent.things.length }}</p>
+    <form ng-submit="$parent.save()" name="$parent.form" novalidate="">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="thing's name" ng-model="$parent.newThing.name"/>
+        </label>
+      </div>
+      <button type="submit" class="button button-block button-energized">Add Thing</button>
+    </form>
+    <div class="list">
+      <div ng-repeat="thing in $parent.things" class="item item-button-right">
+        <p>{{ thing.name }}</p>
+        <button ng-click="$parent.remove(thing)" class="button button-assertive">
+          <i class="icon ion-trash-a"></i>
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>
