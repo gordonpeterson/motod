@@ -14,10 +14,9 @@
 		.controller('dashboardCtrl', dashboardCtrl);
 
 	/* @ngInject */
-	function dashboardCtrl ( $scope, $meteor ) {
+	function dashboardCtrl ( $scope, appFactory ) {
 
-		//jshint ignore:line
-		var vm = this; 
+		var vm = this; //jshint ignore:line
 		vm.controllerName = 'dashboardCtrl'; 
 		vm.featured = [];
 		vm.selectedSeries = {};
@@ -25,13 +24,14 @@
 
 
 		vm.slideHasChanged = function ( index ) {
-			console.log( 'current slide: ' + index );
-			vm.selectedSeries = vm.featured[index];
-			console.log( vm.featured[index] );
-		}
+			// console.log( 'current slide: ' + index );
+			// vm.selectedSeries = vm.featured[index];
+			// console.log( vm.featured[index] );
+			appFactory.setCurrentSeries( vm.featured[index] );
+		};
 		vm.changeSlide = function ( index ) {
 			console.log( 'change slide to : ' + index );
-		}
+		};
 		
 
 		activate();
@@ -41,8 +41,19 @@
 			if (vm.featured.length > 0 ) {
 				vm.selectedSeries = vm.featured[0];
 				vm.selectedSeries._id = vm.featured[0]._id || 'not-found';
-			};
+			}
+
+			appFactory.getCurrentSeries().then(
+				function () {},
+				function () {},
+				function ( series ) {
+					console.log( series );
+					vm.selectedSeries = series;
+				}
+			);
+
 		}
+
 
 	}
 
