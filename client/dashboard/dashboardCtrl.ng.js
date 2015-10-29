@@ -14,7 +14,7 @@
 		.controller('dashboardCtrl', dashboardCtrl);
 
 	/* @ngInject */
-	function dashboardCtrl ( $scope, $rootScope, appFactory ) {
+	function dashboardCtrl ( $scope, appFactory ) {
 
 		var vm = this; //jshint ignore:line
 		vm.controllerName = 'dashboardCtrl'; 
@@ -24,11 +24,8 @@
 
 
 		vm.slideHasChanged = function ( index ) {
-			// console.log( 'current slide: ' + index );
 			vm.selectedSeries = vm.featured[index];
-			// console.log( vm.featured[index] );
 			appFactory.setCurrentSeries( vm.selectedSeries );
-			// $rootScope.$emit( 'seriesChanged', vm.selectedSeries );
 		};
 		vm.changeSlide = function ( index ) {
 			console.log( 'change slide to : ' + index );
@@ -44,7 +41,7 @@
 				vm.selectedSeries = vm.featured[0];
 				vm.selectedSeries._id = vm.featured[0]._id || 'not-found';
 				appFactory.setCurrentSeries( vm.selectedSeries );
-				// $rootScope.$emit( 'seriesChanged', vm.selectedSeries );
+				
 			}
 
 
