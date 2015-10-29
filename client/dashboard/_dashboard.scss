@@ -1,35 +1,69 @@
 .dashboard-view{
+	$maxWidth: 450px;
+	$maxHeight: 450px;
 
 	.slider{
 		height: 230px;
 	}
+	.slider-pager{
+		bottom: 10px;
+	}
 	.slider-slide{
+		// border: 1px solid white;
+		background:  url('/images/series/mec.png') top center no-repeat;
+		background-size: cover;
+
+		// padding: 10px 10px 0;
+		&.mec {
+			background-image: url('/images/series/mec.png');
+			.box{
+				background-color: rgba( $mec, .3);
+			}
+		}
+		&.mx {
+			background-image: url('/images/series/mx.png');
+			.box{
+				background-color: rgba( $mx, .3);
+			}
+		}
+		&.superx {
+			background-image: url('/images/series/superx.png');
+			.box{
+				background-color: rgba( $superx, .3);
+			}
+		}
+		&.mxgp {
+			background-image: url('/images/series/mxgp.png');
+			.box{
+				background-color: rgba( $mxgp, .3);
+			}
+		}
+		&.motogp {
+			background-image: url('/images/series/motogp.png');
+			.box{
+				background-color: rgba( $motogp, .3);
+			}
+		}
+		&.arenax {
+			background-image: url('/images/series/arenax.png');
+			.box{
+				background-color: rgba( $arenax, .3);
+			}
+		}
+		&.nascar {
+			background-image: url('/images/series/nascar.png');
+			.box{
+				background-color: rgba( $nascar, .3);
+			}
+		}
 	}
 	.box{
-		background-color: rgba( black, .5 );
 		height: 100%;
+		max-width: $maxWidth;
+		display: block;
+		margin: 0 auto;
 
-		&.mec{
-			background-color: rgba( $mec, .3);
-		}
-		&.mx{
-			background-color: rgba( $mx, .3);
-		}
-		&.superx{
-			background-color: rgba( $superx, .3);
-		}
-		&.mxgp{
-			background-color: rgba( $mxgp, .3);
-		}
-		&.motogp{
-			background-color: rgba( $motogp, .3);
-		}
-		&.arenax{
-			background-color: rgba( $arenax, .3);
-		}
-		&.nascar{
-			background-color: rgba( $nascar, .3);
-		}
+
 	}
 
 	.details{
@@ -40,10 +74,15 @@
 		// border: 1px solid red;
 		width: 100%;
 		height: auto;
+		background: black;
 		img{
 			// border: 1px solid lime;
 			width: 100%;
 			height: auto;
+			max-width: $maxWidth;
+			max-height: $maxHeight;
+			margin: 0 auto;
+			display: block;
 		}
 	}
 
@@ -54,8 +93,11 @@
 	}
 
 	.all-series.button{
-		margin: 0;
+		// margin: 0;
 		transition: background-color .5s;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $maxWidth;
 	}
 
 	.other-content{
@@ -64,6 +106,9 @@
 
 	.leaderboard{
 		color: goldenrod;
+		max-width: $maxWidth;
+		margin: 0 auto;
+
 		.list{
 			padding: 10px 25px;
 			list-style: initial;

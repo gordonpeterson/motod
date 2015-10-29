@@ -2,14 +2,14 @@
 	ng-class="vm.selectedSeries._id"
 >
 	<ion-slide-box on-slide-changed="vm.slideHasChanged($index)">
-		<ion-slide ng-repeat="item in vm.featured">
-			<div class="box padding" ng-class="item._id">
+		<ion-slide ng-repeat="item in vm.featured" ng-class="item._id">
+			<div class="box padding" >
 				<h1 class="title">{{item.name}}</h1>
 				<p class="details">{{item.description}}</p>
 			</div>
 		</ion-slide>
 	</ion-slide-box>
-	<button class="button all-series button-full button-dark icon-right ion-chevron-right">
+	<button class="button all-series button-block button-dark icon-right ion-chevron-right">
 		View All Series
 	</button>
 	<div class="ad">
