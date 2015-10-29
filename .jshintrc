@@ -1,5 +1,5 @@
 {
-	
+	"devel": true,
 	"globals": {
 		"angular": true,
 		"Meteor": true,
