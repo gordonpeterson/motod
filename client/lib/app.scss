@@ -160,9 +160,8 @@ h1,h2,h3,h4,h5,h6,p,
 				background-color: rgba( $mec, 1);
 				border-color: darken( $mec, 1);
 			}
-			.series-color{
-				color: rgba( $mec, 1);
-			}
+			.button.button-clear.series-button,
+			.series-color{color: rgba( $mec, 1); }
 
 		}
 		&.mx {
@@ -174,9 +173,8 @@ h1,h2,h3,h4,h5,h6,p,
 				background-color: rgba( $mx, 1);
 				border-color: darken( $mx, 1);
 			}
-			.series-color{
-				color: rgba( $mx, 1);
-			}
+			.button.button-clear.series-button,
+			.series-color{color: rgba( $mx, 1); }
 
 		}
 		&.superx {
@@ -188,9 +186,8 @@ h1,h2,h3,h4,h5,h6,p,
 				background-color: rgba( $superx, 1);
 				border-color: darken( $superx, 1);
 			}
-			.series-color{
-				color: rgba( $superx, 1);
-			}
+			.button.button-clear.series-button,
+			.series-color{color: rgba( $superx, 1); }
 
 		}
 		&.mxgp {
@@ -202,9 +199,8 @@ h1,h2,h3,h4,h5,h6,p,
 				background-color: rgba( $mxgp, 1);
 				border-color: darken( $mxgp, 1);
 			}
-			.series-color{
-				color: rgba( $mxgp, 1);
-			}
+			.button.button-clear.series-button,
+			.series-color{color: rgba( $mxgp, 1); }
 
 		}
 		&.motogp {
@@ -216,6 +212,7 @@ h1,h2,h3,h4,h5,h6,p,
 				background-color: rgba( $motogp, 1);
 				border-color: darken( $motogp, 1);
 			}
+			.button.button-clear.series-button,
 			.series-color{
 				color: rgba( $motogp, 1);
 			}
@@ -230,6 +227,7 @@ h1,h2,h3,h4,h5,h6,p,
 				background-color: rgba( $arenax, 1);
 				border-color: darken( $arenax, 1);
 			}
+			.button.button-clear.series-button,
 			.series-color{
 				color: rgba( $arenax, 1);
 			}
@@ -244,6 +242,7 @@ h1,h2,h3,h4,h5,h6,p,
 				background-color: rgba( $nascar, 1);
 				border-color: darken( $nascar, 1);
 			}
+			.button.button-clear.series-button,
 			.series-color{
 				color: rgba( $nascar, 1);
 			}
