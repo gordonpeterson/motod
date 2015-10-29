@@ -13,10 +13,8 @@
 		.module('motodynastyApp')
 		.controller('appCtrl', appCtrl);
 
-	appCtrl.$inject = ['$rootScope'];
-
 	/* @ngInject */
-	function appCtrl ($rootScope) {
+	function appCtrl ($rootScope, appFactory) {
 
 		//jshint ignore:line
 		var vm = this; 
@@ -29,6 +27,8 @@
 		function activate () {
 			console.log( 'activated controller: ' + vm.controllerName );
 			$rootScope.$on('$stateChangeStart', onStateChange);
+			$rootScope.$on('seriesChanged', onSeriesChange);
+
 		}
 
 		function onStateChange (event, toState, toParams, fromState, fromParams){ 
@@ -40,6 +40,11 @@
 		    // transitionTo() promise will be rejected with 
 		    // a 'transition prevented' error
 		};
+
+
+		function onSeriesChange ( event, series ) {
+			console.log( series );
+		}
 
 
 

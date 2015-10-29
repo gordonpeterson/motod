@@ -150,6 +150,106 @@ h1,h2,h3,h4,h5,h6,p,
 	background: #1f1f1f url('/images/app-bg.png') center top no-repeat;
 	background-size: cover;
 
+
+		&.mec {
+			background-image: url('/images/series/mec.png');
+			.series-bg{
+				background-color: rgba( $mec, .3);
+			}
+			.series-button{
+				background-color: rgba( $mec, 1);
+				border-color: darken( $mec, 1);
+			}
+			.series-color{
+				color: rgba( $mec, 1);
+			}
+
+		}
+		&.mx {
+			background-image: url('/images/series/mx.png');
+			.series-bg{
+				background-color: rgba( $mx, .3);
+			}
+			.series-button{
+				background-color: rgba( $mx, 1);
+				border-color: darken( $mx, 1);
+			}
+			.series-color{
+				color: rgba( $mx, 1);
+			}
+
+		}
+		&.superx {
+			background-image: url('/images/series/superx.png');
+			.series-bg{
+				background-color: rgba( $superx, .3);
+			}
+			.series-button{
+				background-color: rgba( $superx, 1);
+				border-color: darken( $superx, 1);
+			}
+			.series-color{
+				color: rgba( $superx, 1);
+			}
+
+		}
+		&.mxgp {
+			background-image: url('/images/series/mxgp.png');
+			.series-bg{
+				background-color: rgba( $mxgp, .3);
+			}
+			.series-button{
+				background-color: rgba( $mxgp, 1);
+				border-color: darken( $mxgp, 1);
+			}
+			.series-color{
+				color: rgba( $mxgp, 1);
+			}
+
+		}
+		&.motogp {
+			background-image: url('/images/series/motogp.png');
+			.series-bg{
+				background-color: rgba( $motogp, .3);
+			}
+			.series-button{
+				background-color: rgba( $motogp, 1);
+				border-color: darken( $motogp, 1);
+			}
+			.series-color{
+				color: rgba( $motogp, 1);
+			}
+
+		}
+		&.arenax {
+			background-image: url('/images/series/arenax.png');
+			.series-bg{
+				background-color: rgba( $arenax, .3);
+			}
+			.series-button{
+				background-color: rgba( $arenax, 1);
+				border-color: darken( $arenax, 1);
+			}
+			.series-color{
+				color: rgba( $arenax, 1);
+			}
+
+		}
+		&.nascar {
+			background-image: url('/images/series/nascar.png');
+			.series-bg{
+				background-color: rgba( $nascar, .3);
+			}
+			.series-button{
+				background-color: rgba( $nascar, 1);
+				border-color: darken( $nascar, 1);
+			}
+			.series-color{
+				color: rgba( $nascar, 1);
+			}
+
+		}
+
 	.platform-ios.platform-cordova:not(.fullscreen) &{
 		&.has-header{
 			top: 0;

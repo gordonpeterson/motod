@@ -10,52 +10,10 @@
 	}
 	.slider-slide{
 		// border: 1px solid white;
-		background:  url('/images/series/mec.png') top center no-repeat;
-		background-size: cover;
+		// background:  url('/images/series/mec.png') top center no-repeat;
+		// background-size: cover;
 
 		// padding: 10px 10px 0;
-		&.mec {
-			background-image: url('/images/series/mec.png');
-			.box{
-				background-color: rgba( $mec, .3);
-			}
-		}
-		&.mx {
-			background-image: url('/images/series/mx.png');
-			.box{
-				background-color: rgba( $mx, .3);
-			}
-		}
-		&.superx {
-			background-image: url('/images/series/superx.png');
-			.box{
-				background-color: rgba( $superx, .3);
-			}
-		}
-		&.mxgp {
-			background-image: url('/images/series/mxgp.png');
-			.box{
-				background-color: rgba( $mxgp, .3);
-			}
-		}
-		&.motogp {
-			background-image: url('/images/series/motogp.png');
-			.box{
-				background-color: rgba( $motogp, .3);
-			}
-		}
-		&.arenax {
-			background-image: url('/images/series/arenax.png');
-			.box{
-				background-color: rgba( $arenax, .3);
-			}
-		}
-		&.nascar {
-			background-image: url('/images/series/nascar.png');
-			.box{
-				background-color: rgba( $nascar, .3);
-			}
-		}
 	}
 	.box{
 		height: 100%;
