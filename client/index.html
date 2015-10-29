@@ -1,13 +1,12 @@
 <body>
-	<div ng-controller="appCtrl as vm"
-	class="motodynasty-app" ng-class="vm.selectedSeries" 
+	<div ng-controller="appCtrl as theVm"
+	class="motodynasty-app" ng-class="theVm.selectedSeries" 
 	>
 
 		<!-- 
 		<account-view></account-view>
 		 -->
-
-		<div class="content-wrapper" ng-class="vm.currentState">
+		<div class="content-wrapper" ng-class="theVm.selectedSeries">
 			<toolbar></toolbar>
 			<ion-nav-view nam="dynasty-content" class="has-header has-footer">
 				load
