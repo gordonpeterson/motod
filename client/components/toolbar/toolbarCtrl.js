@@ -16,12 +16,13 @@
 	// toolbarCtrl.$inject = [' $ionicModal', '$scope'];
 
 	/* @ngInject */
-	function toolbarCtrl ( $ionicModal, $scope) {
+	function toolbarCtrl ( $ionicModal, $scope, $rootScope) {
 		//jshint ignore:line
 		var vm = this; 
 		vm.controllerName = 'toolbarCtrl'; 
 		vm.modal = {};
 		vm.isModal = true;
+		vm.currentSeries = '';
 
 		vm.openModal = function() {
 			$ionicModal.fromTemplateUrl('client/account/account-view.ng.html', {
@@ -53,6 +54,12 @@
 
 		function activate () {
 			console.log( 'activated controller: ' + vm.controllerName );
+
+			$rootScope.$on('seriesChanged', onSeriesChange);
+		}
+
+		function onSeriesChange (event, series) {
+			vm.currentSeries = series._id;
 		}
 
 	}

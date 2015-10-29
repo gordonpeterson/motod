@@ -12,4 +12,53 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	&.mec{
+		.button.all-series{
+			background-color: $mec;
+			border-color: darken( $mec, .10 );
+		}
+	}
+	&.mx{
+		.button.all-series{
+			background-color: $mx;
+			border-color: darken( $mx, .10 );
+		}
+	}
+	&.superx{
+		.button.all-series{
+			background-color: $superx;
+			border-color: darken( $superx, .10 );
+		}
+	}
+	&.mxgp{
+		.button.all-series{
+			background-color: $mxgp;
+			border-color: darken( $mxgp, .10 );
+		}
+	}
+	&.motogp{
+		.button.all-series{
+			background-color: $motogp;
+			border-color: darken( $motogp, .10 );
+		}
+	}
+	&.arenax{
+		.button.all-series{
+			background-color: $arenax;
+			border-color: darken( $arenax, .10 );
+		}
+	}
+	&.nascar{
+		.button.all-series{
+			background-color: $nascar;
+			border-color: darken( $nascar, .10 );
+		}
+	}
+
+
+
+
+
 }
+

@@ -1,8 +1,8 @@
-<ion-nav-bar class="toolbar bar-dark has-logo" ng-controller="toolbarCtrl as vm">
+<ion-nav-bar class="toolbar bar-dark has-logo" ng-controller="toolbarCtrl as vm" ng-class="vm.currentSeries">
 	<ion-nav-back-button></ion-nav-back-button>
   <div class="h1 title">Moto Dynasty</div>
 	<ion-nav-buttons side="secondary ">
-		<button class="button button-clear button-energized" ng-click="vm.openModal()">
+		<button class="button button-clear series-button" ng-click="vm.openModal()">
 			<i class="ion-person icon"></i>
 		</button>
 	</ion-nav-buttons>
