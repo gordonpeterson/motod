@@ -1,4 +1,9 @@
 /*jshint strict:false*/
+
+
+
+
+
 if( Meteor.users.find().count() === 0 ){
 	var id = Accounts.createUser({
 		username : 'gordon',

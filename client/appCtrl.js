@@ -44,7 +44,7 @@
 
 		function onSeriesChange ( event, series ) {
 			console.log( series );
-			vm.selectedSeries = series._id;
+			vm.selectedSeries = series.type;
 		}
 
 

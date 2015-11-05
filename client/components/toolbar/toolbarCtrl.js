@@ -59,7 +59,7 @@
 		}
 
 		function onSeriesChange (event, series) {
-			vm.currentSeries = series._id;
+			vm.currentSeries = series.type;
 		}
 
 	}
