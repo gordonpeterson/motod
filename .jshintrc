@@ -7,7 +7,10 @@
 		"_": true
 	},
 	"predef": [ 
-		"Account",
+		"Accounts",
+		"Roles",
+		"Series",
+		"Riders",
 		"Contest",
 		"isAdmin"
 	]
