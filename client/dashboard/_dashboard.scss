@@ -20,12 +20,16 @@
 		max-width: $maxWidth;
 		display: block;
 		margin: 0 auto;
-
-
 	}
 
-	.details{
+	.title{
+		font-size: 2em;
+	}
+
+	.details p{
 		margin: 15px 35px;
+		color: goldenrod;
+		text-align: center;
 	}
 
 	.ad{
@@ -56,6 +60,8 @@
 		margin-left: auto;
 		margin-right: auto;
 		max-width: $maxWidth;
+		margin-bottom: 0;
+		color: goldenrod;
 	}
 
 	.other-content{
