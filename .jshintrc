@@ -10,6 +10,7 @@
 		"Accounts",
 		"Roles",
 		"Series",
+		"SeriesTypes",
 		"Riders",
 		"Contest",
 		"isAdmin"
