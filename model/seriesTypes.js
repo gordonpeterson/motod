@@ -7,6 +7,20 @@ SeriesTypes.available = function () {
 	return SeriesTypes.find( {available : true} );
 };
 
+SeriesTypes.addRaceClass = function ( seriesType, className, available ) {
+	available = available === undefined ? true : false;
+	var newRaceClass = {
+		name: className,
+		available: available
+	};
+	// console.log( '--------------newRaceClass added------------');
+	// console.log( newRaceClass );
+	// var added = SeriesTypes.update( {type:seriesType}, {$addToSet: {raceClasses: newRaceClass}}, { upsert: false });
+	var added = SeriesTypes.update( {type:seriesType}, {$addToSet: {raceClasses: className}}, { upsert: false });
+	// console.log( added );
+	// console.log( ' ');
+};
+
 /* jshint unused: false */
 SeriesTypes.allow({
 	update : function ( query, document ) {
