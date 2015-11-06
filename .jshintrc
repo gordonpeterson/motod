@@ -1,9 +1,16 @@
+//.jshintrc
 {
+	"maxerr": 50,
 	"devel": true,
 	"globals": {
 		"angular": true,
 		"Meteor": true,
 		"Mongo": true,
+		"Mocha" : true,
+		"MochaWeb" : true,
+		"describe" : true,
+		"it" : true,
+		"chai" : true,
 		"_": true
 	},
 	"predef": [ 
