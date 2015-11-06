@@ -14,7 +14,7 @@
 		.controller('dashboardCtrl', dashboardCtrl);
 
 	/* @ngInject */
-	function dashboardCtrl ( $scope, appFactory ) {
+	function dashboardCtrl ( $scope, appFactory, $meteor ) {
 
 		var vm = this; //jshint ignore:line
 		vm.controllerName = 'dashboardCtrl'; 
@@ -36,12 +36,13 @@
 
 		function activate () {
 			
-			vm.featured = $scope.$meteorCollection( Series.featured );
+			// vm.featured = $scope.$meteorCollection( Series.getFeatured );
+			vm.featured = $meteor.collection( Series.getFeatured );
+
 			if (vm.featured.length > 0 ) {
 				vm.selectedSeries = vm.featured[0];
 				vm.selectedSeries.type = vm.featured[0].type || 'not-found';
 				appFactory.setCurrentSeries( vm.selectedSeries );
-				
 			}
 
 
