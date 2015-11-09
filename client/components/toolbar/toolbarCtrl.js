@@ -1,4 +1,7 @@
+/* jshint strict: false */
 ( function () {
+
+
 'use strict';
 	
 	/**
@@ -16,15 +19,15 @@
 	// toolbarCtrl.$inject = [' $ionicModal', '$scope'];
 
 	/* @ngInject */
-	function toolbarCtrl ( $ionicModal, $scope, $rootScope) {
-		//jshint ignore:line
-		var vm = this; 
+	function toolbarCtrl ( $ionicModal, $scope, $rootScope, $ionicHistory, $state) {
+		var vm = this; //jshint ignore:line
 		vm.controllerName = 'toolbarCtrl'; 
 		vm.modal = {};
 		vm.isModal = true;
 		vm.currentSeries = '';
 
 		vm.openModal = function() {
+
 			$ionicModal.fromTemplateUrl('client/account/account-view.ng.html', {
 				scope: $scope,
 				controller: vm,
@@ -35,7 +38,7 @@
 				vm.isModal = true;
 				// vm.controller = vm;
 				vm.modal.show();
-				vm.backIcon = "ion-close";
+				vm.backIcon = 'ion-close';
 			});
 		};
 
@@ -47,7 +50,7 @@
 			} else {
 				$state.go('dashboard');
 			}
-		}
+		};
 		
 
 		activate();

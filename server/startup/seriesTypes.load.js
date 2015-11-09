@@ -2,7 +2,7 @@
 Meteor.startup(function () {
 
 	//################# REMOVE DATA #############
-	// SeriesTypes.remove({}); 
+	SeriesTypes.remove({}); 
 	//################# REMOVE DATA #############
 
 	console.dir( SeriesTypes.find().fetch() );
@@ -11,36 +11,43 @@ Meteor.startup(function () {
 		var items = [
 		{
 			type : 'mx',
+			name: 'MotoCross',
 			available : true,
 			raceClasses:[]
 		},
 		{
 			type : 'mec',
+			name: 'Monster Energy Cup',
 			available : true,
 			raceClasses:[]
 		},
 		{
 			type : 'superx',
+			name: 'SuperCross',
 			available : true,
 			raceClasses:[]
 		},
 		{
 			type : 'mxgp',
+			name: 'MXGP',
 			available : true,
 			raceClasses:[]
 		},
 		{
 			type : 'motogp',
+			name: 'MotoGP',
 			available : true,
 			raceClasses:[]
 		},
 		{
 			type : 'arenax',
+			name: 'ArenaCross',
 			available : false,
 			raceClasses:[]
 		},
 		{
 			type : 'nascar',
+			name: 'NASCAR',
 			available : false,
 			raceClasses:[]
 		}

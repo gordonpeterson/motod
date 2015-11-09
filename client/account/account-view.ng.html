@@ -8,38 +8,67 @@
 		</ion-nav-buttons>
 	</ion-nav-bar>
 	<div class="account-content" ng-controller="accountCtrl as vm">
-		<div class="bar sub-navbar bar-energized">
-			<blaze-template name="loginButtons"></blaze-template>
-		</div>
+		
 	
 		<div ng-switch on="vm.userType">
 	
 			<div ng-switch-when="admin">
 				<ion-tabs class="tabs-dark " ng-controller="adminCtrl as admin">
 
-					<ion-tab title="Admin" icon-on="ion-lock-combination" icon-off="ion-lock-combination">
-						<ion-content class="admin has-subheader padding">
-							<h3 class="title">Admin: {{vm.username}}</h3>
+
+					<ion-tab title="Home" icon-on="ion-home" icon-off="ion-home-outline">
+						<ion-content class="home">
+							<blaze-template name="loginButtons"></blaze-template>
+							<h3 class="title">Welcome: {{vm.username}}</h3>	
+						</ion-content>
+					</ion-tab>
+
+					<ion-tab title="Series" icon-on="ion-map" icon-off="ion-map">
+						<ion-content class="series">
 							<form>
-								<ion-radion ng-repeat="type in admin.seriesTypes" ng-model="type.type" ng-value="'type.type'">Series Type {{type.type}}</ion-radio>
+								<div class="list" ng-show="admin.selectedSeriesType">
+									<div class="item-divider positive-bg light">{{admin.selectedSeriesType.name}} Info</div>
+									<label class="item item-input">
+										<input type="text" ng-model="admin.seriesName" placeholder="Display Name">
+									</label>
+
+									<ion-toggle ng-model="admin.available" toggle-class="toggle-positive">Available</ion-toggle>
+
+									<ion-item class="rounds stepper">
+										<button class="button button-positive" ng-click="admin.lessRounds()">
+											<i class="icon ion-minus"></i>
+										</button>
+										<div class="title">Rounds: {{admin.totalRounds}}</div>
+										<button class="button button-positive" ng-click="admin.moreRounds()">
+											<i class="icon ion-plus"></i>
+										</button>
+									</ion-item>
+								</div>
+
+								<hr>
+								<button class="button-block button-positive" ng-show="admin.seriesName.length>=3 && admin.totalRounds > 0">
+									Create Series
+								</button>
+								<hr>
+								
+								<div class="list">
+									<div class="item-divider positive-bg light">{{admin.selectedSeriesType.name ? 'Selected Series Type' : 'Select a Series Type'}}</div>
+									<ion-radio ng-repeat="type in admin.seriesTypes" ng-model="admin.selectedSeriesType" ng-value="type">{{type.name}}</ion-radio>
+								</div>
+
+
+
 								
 							</form>
 						</ion-content>
 						<!-- Tab 1 content -->
 					</ion-tab>
 
-					<ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
-						<ion-content class="admin has-subheader padding">
-						<h3 class="title">Profile: {{vm.username}}</h3>	
-						</ion-content>
-						<!-- Tab 2 content -->
-					</ion-tab>
-
 					<ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
-						<ion-content class="admin has-subheader padding">
+						<ion-content class="settings">
 						<h3 class="title">Settings: {{vm.username}}</h3>	
-						</ion-content>
 						<!-- Tab 3 content -->
+						</ion-content>
 					</ion-tab>
 
 				</ion-tabs>

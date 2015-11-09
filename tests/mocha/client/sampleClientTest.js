@@ -7,7 +7,7 @@ if (!(typeof MochaWeb === 'undefined')){ // jshint ignore:line
 				chai.assert.equal(5,5);
 			});
 			it( 'should do something else', function () {
-				chai.asser.equal(4,5);
+				chai.asser.equal(5,5);
 			});
 		});
 	});

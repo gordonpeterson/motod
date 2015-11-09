@@ -9,4 +9,28 @@
 	}
 	.account-content{
 	}
+
+
+}
+
+
+.stepper{
+	position: relative;
+	// min-height: 60px;
+	.title{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.button{
+		position: absolute;
+		top: 0px;
+		top: 3px;
+		&:first-child{
+			left: 8px;
+		}
+		&:last-child{
+			right: 8px;
+		}
+	}
 }

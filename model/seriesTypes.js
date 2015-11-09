@@ -13,12 +13,12 @@ SeriesTypes.addRaceClass = function ( seriesType, className, available ) {
 		name: className,
 		available: available
 	};
-	// console.log( '--------------newRaceClass added------------');
-	// console.log( newRaceClass );
+	console.log( '--------------newRaceClass added to ------------');
+	console.log( newRaceClass );
 	// var added = SeriesTypes.update( {type:seriesType}, {$addToSet: {raceClasses: newRaceClass}}, { upsert: false });
 	var added = SeriesTypes.update( {type:seriesType}, {$addToSet: {raceClasses: className}}, { upsert: false });
-	// console.log( added );
-	// console.log( ' ');
+	console.log( seriesType + '.added = ' + added );
+	console.log( ' ');
 };
 
 /* jshint unused: false */
