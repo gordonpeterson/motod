@@ -15,18 +15,35 @@
 		<div ng-switch on="vm.userType">
 	
 			<div ng-switch-when="admin">
-				<ion-content class="admin has-subheader padding">
-					<h3 class="title">Yo {{vm.username}}</h3>	
-				</ion-content>
-				<ion-footer-bar class="bar-dark">
-					<div class="buttons">
-						<button class="button">Left Button</button>
-					</div>
-					<h1 class="title">Yo Admin</h1>
-					<div class="buttons" ng-click="doSomething()">
-						<button class="button">Right Button</button>
-					</div>
-				</ion-footer-bar>
+				<ion-tabs class="tabs-dark " ng-controller="adminCtrl as admin">
+
+					<ion-tab title="Admin" icon-on="ion-lock-combination" icon-off="ion-lock-combination">
+						<ion-content class="admin has-subheader padding">
+							<h3 class="title">Admin: {{vm.username}}</h3>
+							<form>
+								<ion-radion ng-repeat="type in admin.seriesTypes" ng-model="type.type" ng-value="'type.type'">Series Type {{type.type}}</ion-radio>
+								
+							</form>
+						</ion-content>
+						<!-- Tab 1 content -->
+					</ion-tab>
+
+					<ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+						<ion-content class="admin has-subheader padding">
+						<h3 class="title">Profile: {{vm.username}}</h3>	
+						</ion-content>
+						<!-- Tab 2 content -->
+					</ion-tab>
+
+					<ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+						<ion-content class="admin has-subheader padding">
+						<h3 class="title">Settings: {{vm.username}}</h3>	
+						</ion-content>
+						<!-- Tab 3 content -->
+					</ion-tab>
+
+				</ion-tabs>
+				
 			</div> <!-- end admin -->
 	
 	
