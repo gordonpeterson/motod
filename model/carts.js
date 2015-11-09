@@ -1,6 +1,7 @@
 /* jshint strict: false */
 /* globals Carts: true */
-/* exported Carts*/
+/* exported: Carts*/
+
 Carts = new Mongo.Collection('carts');
 
 Carts.getCart = function ( userKey ) {

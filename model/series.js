@@ -1,6 +1,7 @@
 /* jshint strict: false */
 /* globals Series: true */
-/* exported Series*/
+/* exported: Series */
+
 Series = new Mongo.Collection('series');
 
 Series.getFeatured = Series.featured = function () {
