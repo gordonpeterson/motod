@@ -34,6 +34,10 @@
 			}
 		};
 
+		vm.createSeries = function () {
+			debugger;
+		};
+
 		activate();
 
 		function activate () {

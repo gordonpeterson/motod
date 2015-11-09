@@ -45,13 +45,14 @@
 									</ion-item>
 								</div>
 
-								<hr>
-								<button class="button-block button-positive" ng-show="admin.seriesName.length>=3 && admin.totalRounds > 0">
+								<button ng-click="admin.createSeries()"
+									class="button button-block button-positive" 
+									ng-show="admin.seriesName.length>=1 && admin.totalRounds > 0"
+									>
 									Create Series
 								</button>
-								<hr>
 								
-								<div class="list">
+								<div class="list" ng-hide="admin.seriesName.length>=1 && admin.totalRounds > 0">
 									<div class="item-divider positive-bg light">{{admin.selectedSeriesType.name ? 'Selected Series Type' : 'Select a Series Type'}}</div>
 									<ion-radio ng-repeat="type in admin.seriesTypes" ng-model="admin.selectedSeriesType" ng-value="type">{{type.name}}</ion-radio>
 								</div>
