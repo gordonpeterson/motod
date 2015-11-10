@@ -29,7 +29,7 @@
 								<div class="list" ng-show="admin.selectedSeriesType">
 									<div class="item-divider positive-bg light">{{admin.selectedSeriesType.name}} Info</div>
 									<label class="item item-input">
-										<input type="text" ng-model="admin.seriesName" placeholder="Display Name">
+										<input type="text" ng-model="admin.seriesName" placeholder="{{admin.selectedSeriesType.name}} Series Name">
 									</label>
 
 									<ion-toggle ng-model="admin.available" toggle-class="toggle-positive">Available</ion-toggle>
