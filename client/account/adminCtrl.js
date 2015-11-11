@@ -20,8 +20,11 @@
 		var vm = this; //jshint ignore:line
 		vm.controllerName = 'adminCtrl'; 
 		vm.seriesTypes = [];
-		vm.selectedSeriesType = undefined;
+		vm.selectedSeriesType = '';
+		vm.seriesName = '';
 		vm.totalRounds = 0;
+		vm.featured = false;
+		vm.available = false;
 		vm.minRounds = 0;
 
 		vm.moreRounds = function () {
@@ -36,6 +39,7 @@
 
 		vm.createSeries = function () {
 			debugger;
+			Series.createSeries( vm.selectedSeriesType, vm.seriesName, vm.totalRounds, new Date(), new Date(), vm.featured, vm.available )
 		};
 
 		activate();

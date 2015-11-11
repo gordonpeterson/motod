@@ -4,17 +4,13 @@
 
 Series = new Mongo.Collection('series');
 
-Series.getFeatured = Series.featured = function () {
+Series.getFeatured = function () {
 	return Series.find( {featured : true} );
 };
 
-Series.addRound = function ( seriesType, index, roundName, startDate, endDate, available ) {
-	// 'test', 'A Test Series', 'Dec 12, 2015', 'May 28,2015', true, true
-	// console.log( 'series: ' + seriesType + 'rounds[' + index + '] =' + roundName + '. available:' + available );
-	// console.log( '   start:' + startDate + ', end:'+endDate );
+Series.addRound = function ( seriesId, index, roundName, startDate, endDate, available ) {
 
-
-	Series.update({type:'mec'}, {
+	Series.update( {_id:seriesId }, {
 		$addToSet:{
 			rounds: {
 					index: index,
@@ -31,7 +27,8 @@ Series.addRound = function ( seriesType, index, roundName, startDate, endDate, a
 
 Series.createSeries = function ( seriesType, seriesName, totalRounds, startDate, endDate, featured, available ) {
 	var newSeries = {
-		type : seriesType,
+		seriesId: seriesType._id,
+		type : seriesType.type,
 		name : seriesName,
 		startDate : startDate,
 		endDate : endDate,
@@ -39,10 +36,10 @@ Series.createSeries = function ( seriesType, seriesName, totalRounds, startDate,
 		available : available
 	};
 
-	Series.update( { type: seriesType }, {$set: newSeries}, {upsert:true} );
+	var newId = Series.insert( newSeries );
 	for (var i = 0; i < totalRounds; i++) {
 		var roundName = seriesName + ' round ' + (i+1);
-		Series.addRound( seriesType, i, roundName, startDate, endDate, available );
+		Series.addRound( newId, i, roundName, startDate, endDate, available );
 	}
 
 };
