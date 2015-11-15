@@ -38,6 +38,9 @@
 			
 			// vm.featured = $scope.$meteorCollection( Series.getFeatured );
 			vm.featured = $meteor.collection( Series.getFeatured );
+			$scope.$meteorSubscribe('series').then(function () {
+				vm.featured = $meteor.collection( Series.getFeatured );
+			});
 
 			if (vm.featured.length > 0 ) {
 				vm.selectedSeries = vm.featured[0];
